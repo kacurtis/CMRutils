@@ -1,0 +1,18 @@
+Package: CRCutils
+Type: Package
+Title: Utility Functions for CRC Data
+Version: 0.1.0
+Author: K. Alexandra Curtis
+Maintainer: Alexandra Curtis <alex.curtis@noaa.gov>
+Description: Utility functions for working with data from Cascadia Research 
+    Collective.
+URL: https://github.com/kacurtis/CRCutils
+Imports: 
+    DBI,
+    odbc,
+    dplyr,
+    magrittr
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.1.1
