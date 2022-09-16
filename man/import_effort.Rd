@@ -4,10 +4,12 @@
 \alias{import_effort}
 \title{Import effort data}
 \usage{
-import_effort(datdir, effyrs = NULL)
+import_effort(datdir, filename = NULL, effyrs = NULL)
 }
 \arguments{
 \item{datdir}{Directory path for effort data files}
+
+\item{filename}{Years for which to import effort}
 
 \item{effyrs}{Years for which to import effort}
 }
@@ -15,8 +17,8 @@ import_effort(datdir, effyrs = NULL)
 list of data frames for with effort, effort events, and event codes
 }
 \description{
-Import data from CRC Sighting databases
+Import data from CRC or SPLASH Sighting databases
 }
 \details{
-Assumes effort data files ('CRC Sighting Data YYYY.mdb') all stored in one directory
+Assumes effort data files (e.g., 'CRC Sighting Data YYYY.mdb') all stored in one directory
 }

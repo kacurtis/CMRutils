@@ -3,4 +3,5 @@
 export("%>%")
 export(import_effort)
 export(import_mnid)
+export(import_mnid_old)
 importFrom(magrittr,"%>%")
