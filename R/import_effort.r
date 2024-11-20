@@ -32,7 +32,7 @@ import_effort <- function(datdir, filename = NULL, effyrs = NULL) {
       # fetch data
       tempeff <- DBI::dbReadTable(myconn, "tDailyEffort")
       tempev <- DBI::dbReadTable(myconn, "tDailyEvents")
-      tempevcode <- DBI::dbReadTable(myconn, "ltEventCodes") %>%   # accepts variation in capitalization of table names in some years
+      tempevcode <- DBI::dbReadTable(myconn, "ltEventCodes")  |>   # accepts variation in capitalization of table names in some years
         dplyr::mutate(yy = y)
       # disconnect
       DBI::dbDisconnect(myconn)
