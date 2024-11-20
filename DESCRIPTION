@@ -1,11 +1,12 @@
-Package: CRCutils
+Package: CMRutils
 Type: Package
-Title: Utility Functions for CRC Data
-Version: 0.1.2
+Title: Utility Functions for Capture Mark Recapture (CMR) Analyses
+Version: 0.2.0
 Author: K. Alexandra Curtis
 Maintainer: Alexandra Curtis <alex.curtis@noaa.gov>
-Description: Utility functions for working with data from Cascadia Research 
-    Collective.
+Description: Utility functions for capture mark recapture (CMR) analyses, 
+  including for working with capture histories and Cascadia Research Collective 
+  data 
 URL: https://github.com/kacurtis/CRCutils
 Imports: 
     DBI,

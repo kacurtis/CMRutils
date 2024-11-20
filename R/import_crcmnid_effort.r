@@ -1,7 +1,7 @@
 #' @title Import effort data
 #' 
 #' @description 
-#' Import data from CRC or SPLASH Sighting databases
+#' Import data from CRC MN ID or SPLASH Sighting databases
 #' 
 #' @details 
 #' Assumes effort data files (e.g., 'CRC Sighting Data YYYY.mdb') all stored in one directory
@@ -13,7 +13,7 @@
 #' @return list of data frames for with effort, effort events, and event codes
 #' 
 #' @export
-import_effort <- function(datdir, filename = NULL, effyrs = NULL) {
+import_crcmnid_effort <- function(datdir, filename = NULL, effyrs = NULL) {
 
   if (is.null(effyrs) & is.null(filename)) 
     stop("Must specify either a filename or at least one year for which to import effort")

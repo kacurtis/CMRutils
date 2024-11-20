@@ -1,4 +1,4 @@
-#' @title Import MN ID data
+#' @title Import CRC MN ID data
 #' 
 #' @description 
 #' Import data from MN ID database, including humpback sightings, location code 
@@ -10,7 +10,7 @@
 #' @return list with sightings, loccode, and biopsy sample tables
 #' 
 #' @export
-import_mnid <- function(datdir, mnidfile) {
+import_crcmnid <- function(datdir, mnidfile) {
 
   # get connection to MN ID db
   driver_string <- "Driver={Microsoft Access Driver (*.mdb, *.accdb)};"
