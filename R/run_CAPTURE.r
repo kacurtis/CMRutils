@@ -42,7 +42,7 @@
 #' Program CAPTURE, Utah State Univ. Press, Logan, Utah. 
 #'
 #' @export
-run_CAPTURE <- function(ch, keep.out=TRUE){
+run_CAPTURE <- function(ch, keep.out=FALSE){
   
   #substitute zero for missing values in capture histories
   for (i in 1:length(ch)) {ch[[i]][is.na(ch[[i]])]= 0}

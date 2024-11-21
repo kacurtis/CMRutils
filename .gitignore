@@ -18,8 +18,8 @@
 /*.Rcheck/
 
 # RStudio files
+/*.Rproj
 .Rproj.user/
-CRCutils.Rproj
 
 # produced vignettes
 vignettes/*.html

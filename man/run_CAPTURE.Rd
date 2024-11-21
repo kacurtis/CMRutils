@@ -4,7 +4,7 @@
 \alias{run_CAPTURE}
 \title{Mark-recapture estimates from CAPTURE}
 \usage{
-run_CAPTURE(ch, keep.out = TRUE)
+run_CAPTURE(ch, keep.out = FALSE)
 }
 \arguments{
 \item{ch}{Data frame or 2D array with binomial capture histories}
@@ -28,10 +28,7 @@ developed as a companion to Otis et al.'s (1978) mark-recapture monograph.
 This function, modified from code written by Jay Barlow (Calambokidis and 
 Barlow 2020), currently only runs the Chao Mth (Chao et al., 1992) and 
 Darroch Mt models, but can easily be modified to run other estimators available 
-in CAPTURE (see program manual in the inst/capture directory of this package). 
-
-Note that the process that runs CAPTURE is sensitive to disruption, so users
-should avoid running any other new processes while using this function.
+in CAPTURE (see program manual in the inst/capture directory of this package).
 }
 \references{
 Calambokidis, J., and J. Barlow. 2020. Updated abundance estimates for blue 
