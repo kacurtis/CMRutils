@@ -25,10 +25,13 @@ which code individual animals (rows) as sighted (1) or not (0) in each occasion
 (cols). The CAPTURE program (Rexstad and Burnham 1992; White et al., 1978) was 
 developed as a companion to Otis et al.'s (1978) mark-recapture monograph. 
 
-This function, modified from code written by Jay Barlow (Calambokidis and 
-Barlow 2020), currently only runs the Chao Mth (Chao et al., 1992) and 
+run_CAPTURE was modified from code written by Jay Barlow (Calambokidis and 
+Barlow 2020), and currently only runs the Chao Mth (Chao et al., 1992) and 
 Darroch Mt models, but can easily be modified to run other estimators available 
 in CAPTURE (see program manual in the inst/capture directory of this package).
+
+Beware that run_CAPTURE has not been made robust to incorrect inputs and is not
+parallelizable in its current form.
 }
 \references{
 Calambokidis, J., and J. Barlow. 2020. Updated abundance estimates for blue 

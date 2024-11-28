@@ -14,10 +14,13 @@
 #' (cols). The CAPTURE program (Rexstad and Burnham 1992; White et al., 1978) was 
 #' developed as a companion to Otis et al.'s (1978) mark-recapture monograph. 
 #' 
-#' This function, modified from code written by Jay Barlow (Calambokidis and 
-#' Barlow 2020), currently only runs the Chao Mth (Chao et al., 1992) and 
+#' run_CAPTURE was modified from code written by Jay Barlow (Calambokidis and 
+#' Barlow 2020), and currently only runs the Chao Mth (Chao et al., 1992) and 
 #' Darroch Mt models, but can easily be modified to run other estimators available 
-#' in CAPTURE (see program manual in the inst/capture directory of this package). 
+#' in CAPTURE (see program manual in the inst/capture directory of this package).
+#' 
+#' Beware that run_CAPTURE has not been made robust to incorrect inputs and is not
+#' parallelizable in its current form. 
 #' 
 #' @return list of estimates, standard errors, and capture probabilities
 #' 
@@ -51,13 +54,19 @@ run_CAPTURE <- function(ch, keep.out=FALSE){
   nocc <- ncol(ch)   # number of occasions
   numcaps <- as.numeric(colSums(ch))
   
-  # create temporary working directory
+  # create temporary working directory with copy of CAPTURE and batch file
   wd <- getwd()
   td <- tempdir()
   setwd(td)
-  if (!(file.exists(paste0(td,"/CAPTURE.EXE"))))
+  if (!(file.exists("CAPTURE.EXE"))) {
+    # create temporary copy of CAPTURE in temporary working directory
     utils::unzip(zipfile=system.file("capture", "CAPTURE.zip", package = "CMRutils"), 
                  files = "CAPTURE.EXE", exdir = td)
+    # write temporary batch file
+    fileConn<-file("capture.bat")
+    writeLines("capture i=capture.inp o=capture.out", fileConn)
+    close(fileConn)
+  }
   
   # Create input file for CAPTURE
   filename <- "capture.inp"
@@ -75,13 +84,8 @@ run_CAPTURE <- function(ch, keep.out=FALSE){
   # cat("task model selection","\n",file=zz)
   close(zz)
   
-  # create and run temporary batch file capture.bat
-  fileConn<-file("capture.bat")
-  writeLines("capture i=capture.inp o=capture.out", fileConn)
-  close(fileConn)
-  shell.exec("capture.bat")
-  Sys.sleep(1)
-  file.remove("capture.bat")
+  # run batch file capture.bat
+  system2("cmd", args = c("/c", "start /b capture.bat"))
   
   # extract population estimates and capture probabilities from output file
   outputLines <- readLines("capture.out")   # outfile
