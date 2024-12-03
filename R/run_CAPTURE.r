@@ -86,6 +86,7 @@ run_CAPTURE <- function(ch, keep.out=FALSE){
   
   # run batch file capture.bat
   system2("cmd", args = c("/c", "start /b capture.bat"))
+  Sys.sleep(1)
   
   # extract population estimates and capture probabilities from output file
   outputLines <- readLines("capture.out")   # outfile
