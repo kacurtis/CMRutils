@@ -1,7 +1,7 @@
 Package: CMRutils
 Type: Package
 Title: Utility Functions for Capture Mark Recapture (CMR) Analyses
-Version: 0.3.0
+Version: 1.0.0
 Author: K. Alexandra Curtis
 Maintainer: Alexandra Curtis <alex.curtis@noaa.gov>
 Description: This package provides utility functions for capture mark recapture 
@@ -13,7 +13,7 @@ Imports:
     odbc,
     dplyr,
     stringr
-License: GPL-3
+License: Apache License (>= 2)
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.3.2
