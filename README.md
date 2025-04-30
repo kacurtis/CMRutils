@@ -4,7 +4,7 @@
 
 [![GitHub release (latest by
 date)](https://img.shields.io/github/v/release/kacurtis/CMRutils)](https://github.com/kacurtis/CMRutils/releases)
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15313551.svg)](https://doi.org/10.5281/zenodo.15313550)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15313551.svg)](https://doi.org/10.5281/zenodo.15313551)
 <!-- badges: end -->
 
 ## Description
@@ -16,7 +16,7 @@ and working with Cascadia Research Collective data.
 
 ## Citation
 
-Curtis, K.A. 2025. CMRutils. Version 1.0.0. NOAA Fisheries, Southwest Fisheries Science Center, 8901 La Jolla Shores Dr., La Jolla, CA 92037, DOI: 10.5281/zenodo.15313550
+Curtis, K.A. 2025. CMRutils. Version 1.0.0. NOAA Fisheries, Southwest Fisheries Science Center, 8901 La Jolla Shores Dr., La Jolla, CA 92037, DOI: 10.5281/zenodo.15313551
 
 ## Disclaimer
 
