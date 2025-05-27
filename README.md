@@ -16,7 +16,7 @@ and working with Cascadia Research Collective data.
 
 ## Citation
 
-Curtis, K.A. 2025. CMRutils. Version 1.0.0. NOAA Fisheries, Southwest Fisheries Science Center, 8901 La Jolla Shores Dr., La Jolla, CA 92037, DOI: 10.5281/zenodo.15313551
+Curtis, K.A. 2025. CMRutils. Version 1.0.1. NOAA Fisheries, Southwest Fisheries Science Center, 8901 La Jolla Shores Dr., La Jolla, CA 92037, DOI: 10.5281/zenodo.15313550
 
 ## Disclaimer
 
